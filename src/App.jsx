@@ -1,6 +1,6 @@
 import { Navbar } from './Navbar/components'
+import { Rutas } from './Global/routes'
 import './App.css'
-import { Hooks } from './Hooks/Hooks'
 
 const App = () => {
 
@@ -9,7 +9,7 @@ const App = () => {
   return (
     <>
       <Navbar menu={ menu } />
-      <Hooks />
+      <Rutas />
     </>
   )
 }

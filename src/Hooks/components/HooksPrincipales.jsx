@@ -1,22 +1,21 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
+export const HooksPrincipales = () => {
 
-export const Hooks = () => {
+    // useState
 
     const [count, setCount] = useState(0)
     const [puntitos, setPuntitos] = useState('.')
 
-    const style = {
-        height: '80vh',
-        display: 'flex',
-        placeContent: 'center',
-        placeItems: 'center'
-    }
-
-
     const countClickHandler = () => {
         setCount(count + 1)
+        // console.log(botonRef.current.style.height);
+        // botonRef.current.style.height = '200px'
     }
+
+
+
+    // useEffect
 
     useEffect(() => {
 
@@ -33,11 +32,18 @@ export const Hooks = () => {
 
 
 
+    // useRef
+
+    const botonRef = useRef()
+
 
     return (
-        <div style={ style }>
+        <div>
             <button
-                onClick={ countClickHandler }>
+                ref={ botonRef }
+                onClick={ countClickHandler }
+                style={ { height: '50px' } }
+            >
                 { count + puntitos }
             </button>
         </div>
