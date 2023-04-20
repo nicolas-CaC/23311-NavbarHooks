@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-// Custom Hook
+// Custom Hook (lleva el prefijo 'use' como todos los hooks)
 
 export const useMapeado = (url) => {
 
