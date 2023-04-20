@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+// Custom Hook
+
 export const useMapeado = (url) => {
 
     const [loading, setLoading] = useState(true)
@@ -27,6 +29,7 @@ export const useMapeado = (url) => {
 
     }, [loading])
 
+    // Retorno los valores que voy a necesitar, pueden ser variables, funciones, etc.
     return { data }
 
 }

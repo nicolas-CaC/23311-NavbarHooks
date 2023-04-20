@@ -6,26 +6,32 @@ export const OtroMapeado = () => {
     const { data } = useMapeado('/src/Mapeado/data/users.json')
 
     return (
-        <div className={ centerStyle + " row" }>
+        <div className={ centerStyle + " row my-5" }>
             { data.map(item => <Item key={ item.id } item={ item } />) }
         </div>
     )
 }
 
 
+
+// Esquema/Componente sacado de getBootstrap.com
+
 const Item = ({ item }) =>
-    <div className="card col-3">
+    <div className="card col-6 col-md-6 col-lg-4 col-xl-3">
         <img src={ item.avatar } className="card-img-top" alt="..." />
         <div className="card-body">
             <h5 className="card-title">{ item.first_name + ' ' + item.last_name }</h5>
-            <p className="card-text">{
-                `Título: ${item.employment.title}
-            Habilidad: ${item.employment.key_skill}
-            Ciudad: ${item.address.city}
-            Estado: ${item.address.state}
-            País: ${item.address.country}
-            `
-            }</p>
+            <p className="card-text">
+                { `Título: ${item.employment.title}` }
+                < br />
+                { `Habilidad: ${item.employment.key_skill}` }
+                < br />
+                { `Ciudad: ${item.address.city}` }
+                < br />
+                { `Estado: ${item.address.state}` }
+                < br />
+                { `País: ${item.address.country}` }
+            </p>
         </div>
         <ul className="list-group list-group-flush">
             <li className="list-group-item">{ item.username }</li>
