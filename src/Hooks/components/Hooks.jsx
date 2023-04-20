@@ -1,4 +1,4 @@
-import { HooksPrincipales, UseState } from "./"
+import { HooksPrincipales, UseEffect, UseRef, UseState } from "./"
 import { PropTypesComponent } from "./methods"
 
 const style = {
@@ -28,6 +28,8 @@ export const Hooks = () => {
                 funcion={ propType }
             />
             <UseState />
+            <UseEffect />
+            <UseRef />
         </div>
     )
 }

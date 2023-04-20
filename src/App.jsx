@@ -1,6 +1,7 @@
 import { Navbar } from './Navbar/components'
 import { Rutas } from './Global/routes'
 import './App.css'
+import { Mapeado } from './Mapeado/components/Mapeado'
 
 const App = () => {
 
@@ -10,6 +11,7 @@ const App = () => {
     <>
       <Navbar menu={ menu } />
       <Rutas />
+      <Mapeado />
     </>
   )
 }
