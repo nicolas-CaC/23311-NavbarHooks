@@ -3,7 +3,7 @@ import { PropTypesComponent } from "./methods"
 
 const style = {
     margin: '2em 0em',
-    height: '80vh',
+    // height: '80vh',
     display: 'flex',
     placeContent: 'center',
     placeItems: 'center',
