@@ -1,5 +1,5 @@
-import { HooksPrincipales, UseEffect, UseRef, UseState } from "./"
-import { PropTypesComponent } from "./methods"
+import { HooksPrincipales, UseCallback, UseEffect, UseInsertionEffect, UseLayoutEffect, UseMemo, UseRef, UseState } from "./"
+import { ForwardRef, Memo, OnClickCapture, PropTypesComponent } from "./methods"
 
 const style = {
     margin: '2em 0em',
@@ -30,6 +30,13 @@ export const Hooks = () => {
             <UseState />
             <UseEffect />
             <UseRef />
+            <UseLayoutEffect />
+            <UseInsertionEffect />
+            <OnClickCapture />
+            <Memo />
+            <UseMemo />
+            <UseCallback />
+            <ForwardRef />
         </div>
     )
 }
