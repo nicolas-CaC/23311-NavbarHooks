@@ -6,7 +6,7 @@ export const OtroMapeado = () => {
     const { data } = useMapeado('/src/Mapeado/data/users.json')
 
     return (
-        <div className={ centerStyle + " row my-5" }>
+        <div className={ centerStyle + " w-100 row my-5" }>
             { data.map(item => <Item key={ item.id } item={ item } />) }
         </div>
     )

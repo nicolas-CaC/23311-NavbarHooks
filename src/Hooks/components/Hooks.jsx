@@ -1,23 +1,15 @@
-import { HooksPrincipales, UseCallback, UseEffect, UseInsertionEffect, UseLayoutEffect, UseMemo, UseRef, UseState } from "./"
+import { HooksPrincipales, UseCallback, UseContext, UseDeferredValue, UseEffect, UseId, UseInsertionEffect, UseLayoutEffect, UseMemo, UseReducer, UseRef, UseState, UseSyncExternalStore, UseTransition, UseImperativeHandle } from "./"
 import { ForwardRef, Memo, OnClickCapture, PropTypesComponent } from "./methods"
+import { HooksLayout } from "../layout";
 
-const style = {
-    margin: '2em 0em',
-    // height: '80vh',
-    display: 'flex',
-    placeContent: 'center',
-    placeItems: 'center',
-    flexDirection: 'column',
-    gap: 20,
-    boxSizing: 'content-box'
-}
+
 
 const propType = () => 'funcion';
 
 export const Hooks = () => {
 
     return (
-        <div style={ style }>
+        <HooksLayout>
             {/* <HooksPrincipales /> */ }
             <PropTypesComponent
                 name='Nico'
@@ -37,6 +29,14 @@ export const Hooks = () => {
             <UseMemo />
             <UseCallback />
             <ForwardRef />
-        </div>
+            <UseContext />
+            <UseReducer />
+            <UseImperativeHandle />
+            {/* <UseTransition /> */ }
+            {/* <UseDeferredValue /> */ }
+            <UseId />
+            <UseSyncExternalStore />
+        </HooksLayout>
     )
 }
+
