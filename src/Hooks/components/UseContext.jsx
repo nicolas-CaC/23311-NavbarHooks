@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { HooksContext } from "../context/HooksContext";
 import { centerStyle, oddStyle } from "../styles";
+import { HooksContext } from "../context";
 
 
 export const UseContext = () => {
